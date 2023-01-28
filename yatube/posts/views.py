@@ -1,8 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, render
 
 
 def index(request):
-    return HttpResponse('Главная страница')
+    return render(request, 'posts/index.html')
 
 
 def group_posts(request, slug):
